@@ -15,6 +15,13 @@ $routes->setDefaultController('Home');
 $routes->setDefaultMethod('index');
 $routes->setTranslateURIDashes(false);
 $routes->set404Override();
+$routes->get('/students', 'StudentController::index');
+$routes->get('/students/create', 'StudentController::create');
+$routes->post('/students/store', 'StudentController::store');
+$routes->get('/students/edit/(:num)', 'StudentController::edit/$1');
+$routes->post('/students/update', 'StudentController::update');
+$routes->get('/students/delete/(:num)', 'StudentController::delete/$1');
+
 // The Auto Routing (Legacy) is very dangerous. It is easy to create vulnerable apps
 // where controller filters or CSRF protection are bypassed.
 // If you don't want to define all routes, please use the Auto Routing (Improved).
@@ -40,6 +47,8 @@ $routes->get('/crud/hapus', 'Crud::hapus');
 $routes->get('/crud/edit(:segment)', 'Crud::edit/$1');
 $routes->post('/crud/editan', 'Crud::editan');
 $routes->get('/crud/hapus/(:segment)', 'Crud::hapus/$1');
+$routes->get('crud/edit/(:num)', 'Crud::edit/$1');
+
 
 /*
  * --------------------------------------------------------------------

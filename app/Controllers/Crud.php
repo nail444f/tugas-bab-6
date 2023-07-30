@@ -24,7 +24,7 @@ class Crud extends BaseController
     }
 
     public function tambah(){
-        if (isset($_POST['nim'])&& isset($_POST['nama'])&& isset($_POST['prodi'])&& isset($_POST['universitas'])&& isset($_POST['nomor_handphone'])) {
+        if (isset($_POST['nim'])) {
 
             // Menampung data input yang dikirim upload.php
             // ke variabel $nim
@@ -32,15 +32,14 @@ class Crud extends BaseController
             $nama = $_POST['nama'];
             $prodi = $_POST['prodi'];
             $universitas = $_POST['universitas'];
-            $No_HP = $_POST['nomor_handphone'];
-
+            $nomor_handphone = $_POST['nomor_handphone'];
 
             $upload = [
                 'nim' => $nim,
                 'nama' => $nama,
                 'prodi' => $prodi,
                 'universitas' => $universitas,
-                'nomor_handphone' => $No_HP
+                'nomor_handphone' => $nomor_handphone
             ];
 
             $this->db->insert($upload);
@@ -65,19 +64,19 @@ class Crud extends BaseController
         $newNim = $_POST['newNim'];
         $nama = $_POST['nama'];
         $newNama = $_POST['newNama'];
-        $nama = $_POST['prodi'];
+        $prodi = $_POST['prodi'];
         $newProdi = $_POST['newProdi'];
-        $nama = $_POST['universitas'];
+        $universitas = $_POST['universitas'];
         $newUniversitas = $_POST['newUniversitas'];
-        $No_HP = $_POST['No_HP'];
-        $newNo_HP = $_POST['newNo_HP'];
-        
+        $nomor_handphone = $_POST['nomor_handphone'];
+        $newNomor_handphone =$_POST['nomor_handphone'];
+
         $this->db->where('nim', $nim)
         ->set('nim', $newNim)
         ->set('nama', $newNama)
         ->set('prodi', $newProdi)
         ->set('universitas', $newUniversitas)
-        ->set('nomor_handphone', $newNo_HP)
+        ->set('nomor_handphone', $newNomor_handphone)
         ->update();
         return redirect()->to(base_url('/crud'));
     }

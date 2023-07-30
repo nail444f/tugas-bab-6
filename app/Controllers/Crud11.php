@@ -58,8 +58,6 @@ class Crud extends BaseController
         $newNim = $_POST['newNim'];
         $nama = $_POST['nama'];
         $newNama = $_POST['newNama'];
-        $nama = $_POST['prodi'];
-        $newNama = $_POST['newProdi'];
         
         // Mengatur data yang akan diupdate
         $data = [];
@@ -71,12 +69,7 @@ class Crud extends BaseController
         if (!empty($newNama)) {
             $data['nama'] = $newNama;
         }
-        if (!empty($newProdi)) {
-            $data['prodi'] = $newProdi;
-        }
-        if (!empty($newUniversitas)) {
-            $data['universitas'] = $newUniversitas;
-        }
+
         // Melakukan update jika ada perubahan data
         if (!empty($data)) {
             $this->db->where('nim', $nim)
