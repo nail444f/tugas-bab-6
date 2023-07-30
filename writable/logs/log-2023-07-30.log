@@ -1,0 +1,76 @@
+ERROR - 2023-07-30 09:10:28 --> mysqli_sql_exception: Duplicate entry '32602100005' for key 'PRIMARY' in C:\xampp\htdocs\prakwebprog fix\prakwebprog\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\prakwebprog fix\prakwebprog\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb...', 0)
+#1 C:\xampp\htdocs\prakwebprog fix\prakwebprog\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 C:\xampp\htdocs\prakwebprog fix\prakwebprog\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 C:\xampp\htdocs\prakwebprog fix\prakwebprog\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 C:\xampp\htdocs\prakwebprog fix\prakwebprog\vendor\codeigniter4\framework\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\prakwebprog fix\prakwebprog\vendor\codeigniter4\framework\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\prakwebprog fix\prakwebprog\vendor\codeigniter4\framework\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\prakwebprog fix\prakwebprog\app\Controllers\Crud.php(45): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\prakwebprog fix\prakwebprog\vendor\codeigniter4\framework\system\CodeIgniter.php(932): App\Controllers\Crud->tambah()
+#9 C:\xampp\htdocs\prakwebprog fix\prakwebprog\vendor\codeigniter4\framework\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+#10 C:\xampp\htdocs\prakwebprog fix\prakwebprog\vendor\codeigniter4\framework\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\prakwebprog fix\prakwebprog\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\prakwebprog fix\prakwebprog\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-07-30 09:10:28 --> Duplicate entry '32602100005' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb_mahasiswa` (`nim`, `nama`, `prodi`, `universitas`, `nomor_handphone`) VALUES (\'32602100005\', \'Nailatul Fitriani A.J\', \'teknik informatika\', \'UNISSULA\', \'085290957315\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb_mahasiswa` (`nim`, `nama`, `prodi`, `universitas`, `nomor_handphone`) VALUES (\'32602100005\', \'Nailatul Fitriani A.J\', \'teknik informatika\', \'UNISSULA\', \'085290957315\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb_mahasiswa` (`nim`, `nama`, `prodi`, `universitas`, `nomor_handphone`) VALUES (\'32602100005\', \'Nailatul Fitriani A.J\', \'teknik informatika\', \'UNISSULA\', \'085290957315\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_mahasiswa` (`nim`, `nama`, `prodi`, `universitas`, `nomor_handphone`) VALUES (:nim:, :nama:, :prodi:, :universitas:, :nomor_handphone:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Crud.php(45): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Crud->tambah()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+11 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\prakwebprog fix\\prakwebprog\\public\\index.php')
+CRITICAL - 2023-07-30 09:11:25 --> Too few arguments to function App\Controllers\Crud::hapus(), 0 passed in C:\xampp\htdocs\prakwebprog fix\prakwebprog\vendor\codeigniter4\framework\system\CodeIgniter.php on line 932 and exactly 1 expected
+in APPPATH\Controllers\Crud.php on line 84.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Crud->hapus()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\prakwebprog fix\\prakwebprog\\public\\index.php')
+CRITICAL - 2023-07-30 09:12:55 --> Too few arguments to function App\Controllers\Crud::hapus(), 0 passed in C:\xampp\htdocs\prakwebprog fix\prakwebprog\vendor\codeigniter4\framework\system\CodeIgniter.php on line 932 and exactly 1 expected
+in APPPATH\Controllers\Crud.php on line 84.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Crud->hapus()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\prakwebprog fix\\prakwebprog\\public\\index.php')
+ERROR - 2023-07-30 09:13:11 --> mysqli_sql_exception: Duplicate entry '' for key 'PRIMARY' in C:\xampp\htdocs\prakwebprog fix\prakwebprog\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\prakwebprog fix\prakwebprog\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb...', 0)
+#1 C:\xampp\htdocs\prakwebprog fix\prakwebprog\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 C:\xampp\htdocs\prakwebprog fix\prakwebprog\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 C:\xampp\htdocs\prakwebprog fix\prakwebprog\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 C:\xampp\htdocs\prakwebprog fix\prakwebprog\vendor\codeigniter4\framework\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\prakwebprog fix\prakwebprog\vendor\codeigniter4\framework\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\prakwebprog fix\prakwebprog\vendor\codeigniter4\framework\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\prakwebprog fix\prakwebprog\app\Controllers\Crud.php(45): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\prakwebprog fix\prakwebprog\vendor\codeigniter4\framework\system\CodeIgniter.php(932): App\Controllers\Crud->tambah()
+#9 C:\xampp\htdocs\prakwebprog fix\prakwebprog\vendor\codeigniter4\framework\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+#10 C:\xampp\htdocs\prakwebprog fix\prakwebprog\vendor\codeigniter4\framework\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\prakwebprog fix\prakwebprog\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\prakwebprog fix\prakwebprog\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-07-30 09:13:11 --> Duplicate entry '' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb_mahasiswa` (`nim`, `nama`, `prodi`, `universitas`, `nomor_handphone`) VALUES (\'\', \'Nailatul Fitriani A.J\', \'\', \'\', \'\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb_mahasiswa` (`nim`, `nama`, `prodi`, `universitas`, `nomor_handphone`) VALUES (\'\', \'Nailatul Fitriani A.J\', \'\', \'\', \'\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb_mahasiswa` (`nim`, `nama`, `prodi`, `universitas`, `nomor_handphone`) VALUES (\'\', \'Nailatul Fitriani A.J\', \'\', \'\', \'\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_mahasiswa` (`nim`, `nama`, `prodi`, `universitas`, `nomor_handphone`) VALUES (:nim:, :nama:, :prodi:, :universitas:, :nomor_handphone:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Crud.php(45): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Crud->tambah()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+11 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\prakwebprog fix\\prakwebprog\\public\\index.php')
