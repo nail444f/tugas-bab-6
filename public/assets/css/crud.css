@@ -2,19 +2,19 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
 }
 
 header {
   padding: 20px;
   width: 100%;
-  background-color: tomato;
+  background-color:rgb(80, 127, 255);
   font-size: 25px;
   font-weight: 700;
 }
 
-header nav table tr{
-  color: #FFF;
+header nav table tr {
+  color: #fff;
 }
 
 .title,
@@ -22,7 +22,8 @@ header nav table tr{
 .form {
   margin: 10px;
   padding: 20px;
-  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
   border-radius: 5px;
 }
 
@@ -67,7 +68,7 @@ label {
 
 .input input {
   width: 90%;
-  font-size: 22px;
+  font-size: 15px;
   padding: 5px;
 }
 
